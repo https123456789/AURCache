@@ -35,7 +35,6 @@ jobs:
         run: |
           cargo check
           cargo test --all
-          cd src/pacman-repo-utils && cargo test --all
   lintFlutter:
     runs-on: ubuntu-latest
     defaults:
@@ -48,7 +47,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: 3.29.2
+          flutter-version: 3.32.0
 
       - name: Toolchain info
         run: flutter doctor
